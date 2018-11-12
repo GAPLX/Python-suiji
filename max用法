@@ -1,0 +1,41 @@
+#max用法
+#def max(*args, key=None): # known special case of max
+    """
+    max(iterable, *[, default=obj, key=func]) -> value
+    max(arg1, arg2, *args, *[, key=func]) -> value
+
+    With a single iterable argument, return its biggest item. The
+    default keyword-only argument specifies an object to return if
+    the provided iterable is empty.
+    With two or more arguments, return the largest argument.
+    """
+    pass
+
+# max函数中key的应用
+'''当key参数不为空时，就以  key的函数对象  为判断比较的标准
+   将*args作为key函数参数分别传入
+   返回的仍是*args
+   '''
+import string
+test = 'AasvsSssslv'
+# 当所需的key的函数形式类似.count(a)，*args有且只有一个确定的括号传入位置时，可以省略括号
+max(string.ascii_lowercase,key=test.count) 
+>>> 's'      #[a-z]中在test中出现次数最多的字母 
+# 当所需的key的函数形式类似a.upper()，*args无确定的括号传入位置时，可以采用lambda函数
+max(['a','B','c','d'],key=lambda x: x.upper)
+>>> 'd'      #返回的仍是*args        
+
+
+#max中对字典的操作
+'''在对字典进行数据操作的时候，默认只会处理key，而不是value
+   可以先使用zip把字典的keys和values翻转过来，再用max取出值最大的那组数据
+'''
+#prices = {
+    'A':123,
+    'B':450.1,
+    'C':12,
+    'E':444,
+}
+max_prices = max(zip(prices.values(), prices.keys()))
+print(max_prices) 
+>>> (450.1,'B')  
