@@ -1,0 +1,6 @@
+import string
+
+#string.ascii_lowercase/uppercase  
+'''创建大小写字母字符串'''
+string.ascii_lowercase()
+>>> 'abcdefghijklmnopqrstuvwxyz'
