@@ -1,0 +1,6 @@
+#list - > string 将列表转化为字符串
+''' 运用.join()函数 '''
+a = ['s','sdad','1']
+b = ''.join(a)
+b
+>>> 'ssdad1' 
