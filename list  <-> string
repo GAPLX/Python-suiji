@@ -4,3 +4,9 @@ a = ['s','sdad','1']
 b = ''.join(a)
 b
 >>> 'ssdad1' 
+
+#string - > list 将字符串转化为列表
+''' 用list函数
+a = 'abc'
+list(a)
+>>> ['a','b','c']
