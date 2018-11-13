@@ -1,0 +1,4 @@
+# [i for i in a if i > 2]
+# 忘记这种表达方式叫什么了
+test = [1,23,44,52,2]
+print([i for i in test if i>2])
