@@ -1,0 +1,47 @@
+#set
+'''定义： 一个无序不重复的元素集,支持x in set , len(set)，不支持index
+   内容： set
+          x&y  x|y  x-y  x^y
+          set.add()
+          set.update()
+          set.remove()
+          set.pop()
+          set.discard()
+          set.clear()
+          set.copy()
+'''
+
+#set的创建
+name = ['lx','lk','xx','xx']  #使用set函数
+name = set(name)
+>>>{'lk','lx,'xx'}
+=== name = {'lk','lx,'xx'}  #直接创建
+
+#set的复制
+name_copy = name.copy() #浅复制
+
+#set的增
+name.add('by') #添加一个元素
+>>>{'by','lx','lk'}
+name_2 = {'lwb','xel'}  
+name.updata(name_2)    #添加多个元素
+>>>{'by', 'lk', 'lwb', 'lx', 'xel', 'xx'}
+
+#set的删
+name.remove('lx')   #删除一个元素，不存在则KeyError
+>>>{'by', 'lk', 'lwb', 'xel', 'xx'}
+name.pop()   #删除并返回set中一个不确定的元素，不存在则KeyError
+>>>{'by', 'lk', 'lwb', 'xx'}
+name.discard('xxz')  #删除一个元素，如果存在的话
+>>>{'by', 'lk', 'lwb', 'xx'}
+name.clear()  #删除所有元素
+>>>{}
+
+#set的逻辑运算
+x in s  #x是否是s的成员
+x <= s    #x中的每一个元素是否都在s中
+x >= s    # s中的每一个元素是否都在x中
+x | s     #x与s的并集
+x & s     #x与s的交集
+x - s      #x与s的差集
+x ^ s      #x与s互不相同的部分
