@@ -1,0 +1,27 @@
+# combinations 全排列
+'''
+combinations(iterable,r)
+iterable 排列组合目标对象
+r 排列组合的长度
+返回一个迭代器，遍历读取
+'''
+from itertools import combinations as C
+text = [1,2,3,4]
+# n=2，m=4 长度为2的所有排列组合情况
+C(text,2)
+combinations = [i for i in a]
+combinations
+>>>[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+# n=[1,4], m=4 所有排列组合情况
+combinations = [text[start:end] for start,end in C(range(len(text)+1),2)]
+combinations
+>>>[[1],
+ [1, 2],
+ [1, 2, 3],
+ [1, 2, 3, 4],
+ [2],
+ [2, 3],
+ [2, 3, 4],
+ [3],
+ [3, 4],
+ [4]]
