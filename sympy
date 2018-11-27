@@ -2,6 +2,7 @@
 '''
 内容：
 Symbol 定义符号变量
+abc 定义符号变量
 expand 展开式
 solve 解方程
 limit 求极限
@@ -20,6 +21,10 @@ from sympy import *
 # 分开定义
 x = Symbol('x')
 y = Symbol('y')
+
+#abc
+#一起定义
+from sympy.abc import x,y,z,a,b
 
 # expand
 z = expand(x*(x+y))
