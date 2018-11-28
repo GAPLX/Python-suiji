@@ -1,2 +1,20 @@
-第一题   字符串中是否含有某些特定字符
-第二题   字符串中某些特定字符的频率
+#通过checkio来的灵感，根据世界思维名题660道一书，改编一些有趣的题目用代码来实现
+
+#找整数最小公倍数
+def checkio(data):
+    lenth = len(data)
+    i = 1
+    while True:
+        bol = False
+        for j in data:
+            bol += bool(i%j==0)
+        if bol == lenth:
+            print(i)
+            break
+        i+=1
+                
+        
+        
+data = (1,2,3,4,5,6,7,8,9)
+checkio(data)
+>>>2520
