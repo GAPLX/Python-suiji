@@ -1,0 +1,15 @@
+#eval()
+'''
+功能：将字符串str当成有效的表达式来求值并返回计算结果。
+语法：eval(source[, globals[, locals]]) -> value
+参数：source：一个Python表达式或函数compile()返回的代码对象
+     globals：可选。必须是dictionary
+     locals：可选。任意map对象
+'''
+text = '['a','b','c']'
+eval(a)
+>>> ['a','b','c']
+
+text = '{a:1,b:2,c；3}'
+eval(b)
+>>> {a:1,b：2,c:3}
