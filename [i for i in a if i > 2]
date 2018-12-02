@@ -18,3 +18,15 @@ a = (i for i in text)
 for i in a:
   print(i)
 >>> a b c d
+
+# Largest Rectangle in a Histogram
+'''
+好像只要有个容器，这个语句就能扔进去
+不能单独存在
+就暂且称它为寄生语句吧
+
+'''
+def largest_histogram(h):
+    n = len(h)
+    return max((j - i) * min(h[i:j]) for i in range(n) for j in range(i+1, n+1))
+   
