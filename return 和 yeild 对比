@@ -1,0 +1,27 @@
+#return和yield对比
+'''
+相同:都返回程序执行结果
+区别：yield返回结果不中断程序进行
+      return返回结果即刻终止程序
+'''
+line = '1234'
+#return
+def ss_1 (line):
+  for i in line:
+    return i
+ss_1(line)
+>>> 1 
+#yield 
+def ss_2(line):
+  for i in line:
+    yield i
+ss_1(line)
+>>> <generator object ss_2 at 0x0000023E9F395360>
+#若要使return达到相同效果
+def ss_3 (line):
+  l = []
+  for i in line:
+    l.append(i)
+  return l
+ss_3(line)
+>>> ['1','2','3','4']
