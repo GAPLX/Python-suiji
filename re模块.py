@@ -180,6 +180,7 @@ print(bool(re.match('ssr','ssr,sr,r')))
 ----------------------------------------------------------------------------
 #re.search(pattern,string,flags=0)
 #扫描整个字符串并返回第一个成功的匹配
+#实质上和match属于同类，匹配失败返回None
 print(bool(re.search('sr','ssr,sr,r')))
 >>> Ture
 print(re.search('\d\W\D','111.wwww').group())
