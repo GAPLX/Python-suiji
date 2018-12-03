@@ -1,0 +1,10 @@
+#有无重复字符串的方法
+'''
+re.search
+in isrepeat_string*2[1:-1] #so cool
+'''
+
+sting = 'ababcde'
+>>>
+re.search('{}{}+'.format('ab'),string)
+if 'abab' in 'abababab'[1:-1]
