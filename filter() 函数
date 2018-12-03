@@ -1,0 +1,15 @@
+#filter()函数
+'''
+说明：  函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新迭代器对象
+表达式：filter(function,iterable)
+参数：  function:过滤函数
+        iterable:可迭代对象
+'''
+
+def is_old(n):
+    if n > 18:
+        return n
+iter = [18,19,20,11,13]
+min(filter(is_old,iter))
+>>>19
+    
