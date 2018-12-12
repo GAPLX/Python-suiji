@@ -28,12 +28,12 @@ combinations
  
  
  
- #用permutation和product实现全排列
+ #用permutations和product实现全排列
  '''
  permutation:对该参数本身进行，全排列
  product：对不同的参数间进行，全排列
  '''
- #permutaition
+ #permutations
     from itertools import *
     for j in permutations([2,5,6]):
         print(j)
