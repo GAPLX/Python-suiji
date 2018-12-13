@@ -1,4 +1,12 @@
-# combinations 排列组合
+#itertools
+'''
+combination(iterable,r) 组合
+permutation() 对参数本身排列
+product( , , ) 对不同参数排列
+chain(*) 使迭代内容更可读
+
+'''
+# combinations 组合
 '''
 combinations(iterable,r)
 iterable 组合目标对象
@@ -84,3 +92,23 @@ combinations
     for i in product(*[list2]*3):
     >>> for i in product([list2],[list2],[list2]):
 
+
+
+#chain(*) 使迭代内容更可读
+from tertools import chain
+#默认返回迭代器对象
+tree = [['Logan', 'Mike'],['Logan', 'Jack']]
+chain(*tree)
+>>><itertools.chain at 0x1e72b973860>
+#可指定输出形式
+tree = [['Logan', 'Mike'],['Logan', 'Jack']]
+list(chain(*tree))
+>>> ['Logan', 'Mike', 'Logan', 'Jack']
+#相互元素间不影响
+tree = [['s','a'],'ss']
+list(chain(*tree))
+>>>['s', 'a', 's', 's']
+#只能褪去一层壳，不只有list才能作为对象
+tree = ([(1,2),(3,4)],'2')
+list(chain(*tree))
+>>>[(1, 2), (3, 4), '2']
