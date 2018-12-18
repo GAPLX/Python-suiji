@@ -24,9 +24,9 @@ int(a,2)
 
 #由十进制到ASCII
 '''
-char()
+chr()
 '''
 a = 109
-char(a)
+chr(a)
 >>> 'm'
 
