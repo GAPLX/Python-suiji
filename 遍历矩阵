@@ -1,0 +1,23 @@
+#一种遍历矩阵的方法
+
+a = '''#0000#
+000#00
+0####0
+#0000#
+'''
+
+for i,row in enumerate(a.splitlines()):
+    for j,cell in enumerate(row):
+        if cell == '#':
+            print(i,j)
+>>>
+0 0
+0 5
+1 3
+2 1
+2 2
+2 3
+2 4
+3 0
+3 5
+  
