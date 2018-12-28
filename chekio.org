@@ -18,6 +18,7 @@ checkio(data)
 
 -----------------------------------------------------------------------------------------------------------
 #checkio_ Escher_ Compass,Map,Spyglass
+#解一
 def navigation(seaside):
     H, W = len(seaside), len(seaside[0])
     pos_map = {seaside[h][w]: (h, w) for h in range(H) for w in range(W) if seaside[h][w] != 0}
@@ -30,3 +31,9 @@ navigation([['Y',0,0,0,'C'],
             [ 0, 0,0,0, 0 ],
             ['M',0,0,0,'S']])
 #line 23,26 中的对寄生函数的用法值得学习，还是用的不流畅
+#解二
+from numpy import array, abs, argwhere
+def navigation(seaside):
+    a = array(seaside)
+    return int(sum(map(max, abs(argwhere(a == 'Y') - argwhere(a != '0')))))
+#这可太帅了吧，对于map也是用的不熟练，迭代方面的直觉欠缺
