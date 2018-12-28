@@ -1,11 +1,12 @@
-#一种遍历矩阵的方法
+#遍历类矩阵数据的方法
 
+
+#遍历矩阵类字符串
 a = '''#0000#
 000#00
 0####0
 #0000#
 '''
-
 for i,row in enumerate(a.splitlines()):
     for j,cell in enumerate(row):
         if cell == '#':
@@ -20,4 +21,17 @@ for i,row in enumerate(a.splitlines()):
 2 4
 3 0
 3 5
-  
+-------------------------------------------------------------  
+#遍历array
+#采用np.argwhere(a)返回array索引值
+#例
+from numpy import array, abs, argwhere
+def navigation(seaside):
+    a = array(seaside)
+    return int(sum(map(max, abs(argwhere(a == 'Y') - argwhere(a != '0')))))
+
+navigation([['Y',0,0,0,'C'],
+            [ 0, 0,0,0, 0 ],
+            [ 0, 0,0,0, 0 ],
+            ['M',0,0,0,'S']])
+
