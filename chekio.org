@@ -1,5 +1,4 @@
 #通过checkio来的灵感，根据世界思维名题660道一书，改编一些有趣的题目用代码来实现
-
 #找整数最小公倍数
 def checkio(data):
     lenth = len(data)
@@ -13,8 +12,21 @@ def checkio(data):
             break
         i+=1
                 
-        
-        
 data = (1,2,3,4,5,6,7,8,9)
 checkio(data)
 >>>2520
+
+-----------------------------------------------------------------------------------------------------------
+#checkio_ Escher_ Compass,Map,Spyglass
+def navigation(seaside):
+    H, W = len(seaside), len(seaside[0])
+    pos_map = {seaside[h][w]: (h, w) for h in range(H) for w in range(W) if seaside[h][w] != 0}
+    yh, yw = pos_map["Y"]; del pos_map["Y"]
+    function = lambda pos: max(abs(yh - pos[0]), abs(yw - pos[1]))
+    return sum(function(pos_value) for pos_value in pos_map.values())
+
+navigation([['Y',0,0,0,'C'],
+            [ 0, 0,0,0, 0 ],
+            [ 0, 0,0,0, 0 ],
+            ['M',0,0,0,'S']])
+#line 23,26 中的对寄生函数的用法值得学习，还是用的不流畅
