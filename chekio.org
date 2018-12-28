@@ -37,3 +37,4 @@ def navigation(seaside):
     a = array(seaside)
     return int(sum(map(max, abs(argwhere(a == 'Y') - argwhere(a != '0')))))
 #这可太帅了吧，对于map也是用的不熟练，迭代方面的直觉欠缺
+#这里用的是一个数组array的减法
