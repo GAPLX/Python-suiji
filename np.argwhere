@@ -1,0 +1,15 @@
+np.argwhere(a)
+'''
+说明：返回非零的数组元组的索引
+参数说明：a 索引数组的条件
+'''
+
+#例
+import numpy as np
+a = np.array([[1,2,3],[3,4,5]])
+np.argwhere(a>2)
+>>>
+array([[0, 2],
+       [1, 0],
+       [1, 1],
+       [1, 2]], dtype=int64)
