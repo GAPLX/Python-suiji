@@ -59,3 +59,24 @@ def col(data,i):
      ['0','#','0'],
      ['0','#','#'],
      ['0','0','#']]
+     
+-----------------------------------------------------------------------------------------------------------
+#Checkio_Escher_Solve wild Dogs
+
+from itertools import combinations
+from collections import Counter
+from math import *
+
+def wild_dogs(coords):
+    def coll(a,b,c):
+        return (b[0]-a[0])*(c[1]-a[1]) == (b[1]-a[1])*(c[0]-a[0])
+    def dist0(a,b):
+        return abs((b[0]-a[0])*a[1] - a[0]*(b[1]-a[1])) / sqrt((b[0]-a[0])**2 + (b[1]-a[1])**2)
+
+    D = Counter((tuple(a),tuple(b)) for a,b,c in combinations(coords,3) if coll(a,b,c))
+    if D:
+        M = max(D.values())
+        return round(min(dist0(a,b) for a,b in D if D[a,b]==M),2)
+    else:
+        return round(min(dist0(a,b) for a,b in combinations(coords,2)),2)
+
