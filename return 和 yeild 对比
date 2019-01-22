@@ -15,7 +15,7 @@ ss_1(line)
 def ss_2(line):
   for i in line:
     yield i
-ss_1(line)
+ss_2(line)
 >>> <generator object ss_2 at 0x0000023E9F395360>
 #若要使return达到相同效果
 def ss_3 (line):
