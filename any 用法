@@ -1,0 +1,39 @@
+Python中any的用法
+
+当any中元素全为0或者‘’或者FALSE时，返回FALSE，否则返回TRUE
+
+>>> any([0])
+
+False
+>>> any([0,1,2])
+True
+>>> any([0,1,2,''])
+True
+>>> any([0,''])
+False
+>>> any((0))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> any((0,))
+False
+>>> any((0,12))
+True
+>>> any((0,12,''))
+True
+>>> any((0,''))
+False
+>>> any({})
+False
+>>> any({'a':1})
+True
+>>> any({''})
+False
+>>> any({0})
+False
+>>> 
+--------------------- 
+作者：darkfour 
+来源：CSDN 
+原文：https://blog.csdn.net/darkfour/article/details/74231357 
+版权声明：本文为博主原创文章，转载请附上博文链接！
