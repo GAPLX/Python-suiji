@@ -33,3 +33,8 @@ def largest_histogram(h):
 
 #例1
 hours = str(hours) + ' hour' + ('' if hours == 1 else 's')   
+
+
+
+#注意对于[fun(a) for a in A if fun(a)!=0],先运行一次if中的fun(a)以它的返回值做判断，而后再运行一次fun(a)并将它的返回值储存，
+如果fun(a)的结果随运行次数会有所改变，这时就会导致出错。
