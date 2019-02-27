@@ -1,0 +1,2 @@
+dect.get('k')
+#如果dict中已经含有k，返回TRUE，否则FALSE
