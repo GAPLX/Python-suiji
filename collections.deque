@@ -1,0 +1,14 @@
+from collections import deque
+#
+创建一种类型为‘队列’的数据结构
+队列只包含出队和入队两种操作
+入队：deque+=...  加入到队列最后位置
+出队：deque.popleft()  弹出队列第一个元素
+先进先出
+
+#入队、出队
+a = deque()
+a += [1,2]
+>>>deque([1, 2])
+a.popleft()
+>>>deque([2])
